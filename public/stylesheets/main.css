@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+.concert {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.concert h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.concert h3 {
+    color: #34495e;
+}
+
+.concert ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.concert li {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,20 @@
+@(concerts: Seq[ConcertWithSetlist])
+
+@main("Concerts and Setlists") {
+  <h1>Concerts and Setlists</h1>
+  @for(concertWithSetlist <- concerts) {
+    <div class="concert">
+      <h2>@concertWithSetlist.concert.name - @concertWithSetlist.concert.date.toString</h2>
+      <h3>Setlist:</h3>
+      @if(concertWithSetlist.setlist.isEmpty) {
+        <p>No tracks in the setlist yet.</p>
+      } else {
+        <ul>
+        @for(track <- concertWithSetlist.setlist) {
+          <li>@track.name (@{track.duration / 60}:@{"%02d".format(track.duration % 60)})</li>
+        }
+        </ul>
+      }
+    </div>
+  }
+}
